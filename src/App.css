@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+:root{
+  --textcolor:#A27CB8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Chocolate Heart';
+  src: url('../src/components/assets/fonts/Chocolate\ Heart\ Free.ttf') format('truetype');
+  /* You may need to specify additional font formats for cross-browser compatibility */
+}
+body{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.choc{
+font-family: 'Choclate Heart';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link.active{
+border-bottom: 2px solid var(--textcolor);
+}
+.nav-link:hover{
+  color: var(--textcolor);
+}
+.navbar-toggler{
+  color: var(--textcolor) !important;
+  background-color: var(--textcolor) !important;
+}
+.img-2{
+      width: 70%;
+      height: 100%;
+}
+.herosection{
+
+    background-image: url(../src/components/assets/images/coffee.jpg);
+    background-size: cover;
+      background-repeat: no-repeat;
+      width: -webkit-fill-available;
+      height: 100vh;
+      position: relative;
+      opacity: 0.9;
+      background-position: center;
+    }
+  
+      
+
+
+.hero-section-text{
+height: 30%;
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: auto;
+    /* Add text shadow for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-section-text h1 {
+
+  color: var(--textcolor);
+  font-size: 45px;
+  /* Add text shadow for better visibility */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-section-text p {
+text-align: center;
+  color: var(--textcolor);
+/* font-family: 'Playfair Display', serif; */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+p{
+font-family: 'Nanum Gothic', sans-serif;
+ color: rgb(110, 108, 108);
+}
+ul{
+  padding: 0;
+}
+ul li{
+list-style: none;
+}
+.rounded-1{
+  border-radius: 30px !important;
+}
+.abt-us{
+ color: var(--textcolor);
+}
+.bgPurp{
+  background-color: var(--textcolor);
+}
+.border-1{
+  /* border-bottom: 2px solid var(--textcolor); */
+font-family: 'Playfair Display', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bg-purple{
+
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.uniqFeature .col-4 h5{
+
+font-family: 'Nanum Gothic', sans-serif;
+/* color: var(--textcolor); */
+
+}
+
+
+.freeofeers{
+  background-color: var(--textcolor);
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  flex-direction:column ;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin: auto;
+}
+.freeofeers1 {
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.freeofeers1 a{
+color: var(--textcolor);
+}
+.shadow{
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.fa{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.whtslink{
+position: fixed;
+  bottom: 20px;
+  right: 10px;
+  padding: 6px;
+    border-radius: 30px;
+    background-color: var(--textcolor);
+  z-index: 999;
 }
