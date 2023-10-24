@@ -1,5 +1,5 @@
-:root{
-  --textcolor:#A27CB8;
+:root {
+  --textcolor: #A27CB8;
 }
 
 @font-face {
@@ -7,64 +7,74 @@
   src: url('../src/components/assets/fonts/Chocolate\ Heart\ Free.ttf') format('truetype');
   /* You may need to specify additional font formats for cross-browser compatibility */
 }
-body{
+
+body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden !important;
+}
+
+html {
   overflow-x: hidden;
 }
-a{
+
+a {
   text-decoration: none;
 
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.choc{
-font-family: 'Choclate Heart';
+
+.choc {
+  font-family: 'Choclate Heart';
 }
 
-.nav-link.active{
-border-bottom: 2px solid var(--textcolor);
-}
-.nav-link:hover{
+
+.nav-link:hover {
   color: var(--textcolor);
 }
-.navbar-toggler{
+
+.navbar-toggler {
   color: var(--textcolor) !important;
   background-color: var(--textcolor) !important;
 }
-.img-2{
-      width: 70%;
-      height: 100%;
+
+.img-2 {
+  width: 70%;
+  height: 100%;
 }
-.herosection{
 
-    background-image: url(../src/components/assets/images/coffee.jpg);
-    background-size: cover;
-      background-repeat: no-repeat;
-      width: -webkit-fill-available;
-      height: 100vh;
-      position: relative;
-      opacity: 0.9;
-      background-position: center;
-    }
-  
-      
+.herosection {
 
-
-.hero-section-text{
-height: 30%;
-width: 50%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: auto;
-    /* Add text shadow for better visibility */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-image: url(../src/components/assets/images/coffee.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: -webkit-fill-available;
+  height: 100vh;
+  position: relative;
+  opacity: 0.9;
+  background-position: center;
 }
+
+
+
+
+.hero-section-text {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* Add text shadow for better visibility */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .hero-section-text h1 {
 
   color: var(--textcolor);
@@ -72,59 +82,69 @@ margin: auto;
   /* Add text shadow for better visibility */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 .hero-section-text p {
-text-align: center;
+  text-align: center;
   color: var(--textcolor);
-/* font-family: 'Playfair Display', serif; */
+  /* font-family: 'Playfair Display', serif; */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-p{
-font-family: 'Nanum Gothic', sans-serif;
- color: rgb(110, 108, 108);
+
+p {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: rgb(110, 108, 108);
 }
-ul{
+
+ul {
   padding: 0;
 }
-ul li{
-list-style: none;
+
+ul li {
+  list-style: none;
 }
-.rounded-1{
+
+.rounded-1 {
   border-radius: 30px !important;
 }
-.abt-us{
- color: var(--textcolor);
+
+.abt-us {
+  color: var(--textcolor);
 }
-.bgPurp{
+
+.bgPurp {
   background-color: var(--textcolor);
 }
-.border-1{
+
+.border-1 {
   /* border-bottom: 2px solid var(--textcolor); */
-font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
 }
 
-.bg-purple{
+.bg-purple {
 
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.uniqFeature .col-4 h5{
-
-font-family: 'Nanum Gothic', sans-serif;
-/* color: var(--textcolor); */
-
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.uniqFeature .col-4 h5 {
 
-.freeofeers{
+  font-family: 'Nanum Gothic', sans-serif;
+  /* color: var(--textcolor); */
+
+}
+
+
+.freeofeers {
   background-color: var(--textcolor);
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  flex-direction:column ;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
+
 .freeofeers1 {
   background-color: white;
   width: 45px;
@@ -136,23 +156,125 @@ font-family: 'Nanum Gothic', sans-serif;
   align-items: center;
   margin: auto;
 }
-.freeofeers1 a{
-color: var(--textcolor);
+
+.freeofeers1 a {
+  color: var(--textcolor);
 }
-.shadow{
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+.shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.fa{
+
+.fa {
   color: white;
 }
 
 
-.whtslink{
-position: fixed;
+.whtslink {
+  position: fixed;
   bottom: 20px;
   right: 10px;
   padding: 6px;
-    border-radius: 30px;
-    background-color: var(--textcolor);
+  border-radius: 30px;
+  background-color: var(--textcolor);
   z-index: 999;
+}
+
+.fontclass {}
+
+.logo-sixe {
+  width: 200px;
+
+}
+
+/* media quries */
+
+/* Extra Small Devices (Portrait) */
+@media only screen and (max-width: 320px) {
+  .fontclass {
+    font-size: 12px;
+  }
+.hero-section-text {
+  height: 46%;}
+  .logo-sixe {
+    width: 145px !important;
+  }
+
+  .hero-section-text h1 {
+
+    font-size: 23px;
+
+  }
+
+  .herosection {
+    background-size: contain;
+    height: 60vh;
+
+  }
+
+  .logo-sixe {
+    width: 144px;
+  }
+}
+
+/* Small Devices (Landscape) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .hero-section-text h1 {
+    font-size: 25px;
+  }
+
+  .herosection {
+    background-size: contain;
+  }
+        .logo-sixe {
+          width: 145px !important;
+        }
+        .herosection{
+          height: 70vh;
+        }
+                .hero-section-text {
+                  height: 46%;
+                }
+}
+
+/* Small Devices (Portrait) */
+@media only screen and (max-width: 768px) {
+
+  .freeofeers1 {
+    margin: 0 10px 0 0;
+  }
+}
+
+
+/* Tablets (Portrait) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Add your styles for tablets (portrait) here */
+}
+
+/* Tablets (Landscape) */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .imgWidth{
+    width: 70%;
+  }
+}
+
+/* Medium Devices */
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+  .imgWidth {
+      width: 70%;
+    }
+}
+
+/* Large Devices */
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+  .imgWidth {
+      width: 70%;
+    }
+}
+
+/* Extra Large Devices (Full HD and 4K Monitors) */
+@media only screen and (min-width: 1441px) and (max-width :2560px) {
+  .fontclass {
+    font-size: 30px;
+  }
 }

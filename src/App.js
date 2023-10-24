@@ -53,7 +53,7 @@ function App() {
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
           <div class="container-fluid">
             <a class="navbar-brand" href="#home">
-              <img src={MyLogo} width={250} className="img-fluid" alt="" />
+              <img src={MyLogo} className="img-fluid logo-sixe" alt="" />
             </a>
             <button
               class="navbar-toggler"
@@ -124,13 +124,16 @@ function App() {
       </Container>
       {/* about us */}
       <Container id="about">
-        {/* about us */}
         <section>
-          <div className="row mt-5 pt-5">
-            <div className="col-5 p-0">
-              <img src={heroImg} className="img-fluid w-75 rounded-1" alt="" />
+          <div className="row mt-lg-5 pt-lg-5 d-flex justify-content-center">
+            <div className="col-lg-5 col-10  p-0">
+              <img
+                src={heroImg}
+                className="img-fluid  rounded-1 imgWidth"
+                alt=""
+              />
             </div>
-            <div className="col-7">
+            <div className="col-lg-7 col-10">
               <h1 className=" mt-4  abt-us border-1">
                 About Women's Focused Cafe
               </h1>
@@ -155,16 +158,20 @@ function App() {
       {/* our menu*/}
       <Container id="menu">
         <section>
-          <h1 className="mt-lg-5 text-center mb-3  abt-us border-1">
-            Our Menu
-          </h1>
-          <p className="text-center">
-            Our menu is full of baverages cold/hot coffee <br></br> shakes ,
-            bakery items and much more <br />
-            check the menu below
-          </p>
-          <div className="row mt-4">
-            <div className="col-4">
+          <div className="row d-flex justify-content-center mt-lg-0 mt-5">
+            <div className="col-lg-5 col-10">
+              <h1 className="mt-lg-5 text-center mb-3  abt-us border-1">
+                Our Menu
+              </h1>
+              <p className="text-center ">
+                Our menu is full of baverages cold/hot coffee shakes , bakery
+                items and much more check the menu below
+              </p>
+            </div>
+          </div>
+
+          <div className="row mt-4 d-flex justify-content-center">
+            <div className="col-lg-4 col-10">
               <div className="bg-purple d-flex flex-column justify-content-center p-3 rounded ">
                 <h2 className="border-1">Baverages</h2>
                 <ul>
@@ -193,7 +200,7 @@ function App() {
               </div>
             </div>
 
-            <div className="col-4">
+            <div className="col-lg-4 col-10 mt-lg-0 mt-3">
               <div className="bg-purple d-flex flex-column justify-content-center p-3 rounded ">
                 <img
                   src={cookingwomen}
@@ -202,7 +209,7 @@ function App() {
                 />
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-10 mt-lg-0 mt-3">
               <div className="bg-purple d-flex flex-column justify-content-center p-3 rounded ">
                 <h2 className="border-1">Bakery Products</h2>
                 <ul>
@@ -239,16 +246,20 @@ function App() {
 
       <Container id="offer" className="mb-5 pb-5">
         <section>
-          <h1 className="mt-5 text-center pt-5  abt-us border-1">
-            Offerings for Women's
-          </h1>
-          <p className="text-center">
-            We are Offering some exclusive benifts to women's however they
-            deserve more than<br></br> it but these are our small initial steps
-            toward women's welfare
-          </p>
-          <div className="row mt-5">
-            <div className="col-4">
+          <div className="row d-flex justify-content-center mt-lg-0 mt-5">
+            <div className="col-lg-6 col-11">
+              <h1 className="mt-5 text-center pt-5  abt-us border-1">
+                Offerings for Women's
+              </h1>
+              <p className="text-center">
+                We are Offering some exclusive benifts to women's however they
+                deserve more than it but these are our small initial steps
+                toward women's welfare
+              </p>
+            </div>
+          </div>
+          <div className="row mt-5 d-flex justify-content-center">
+            <div className="col-lg-4 col-10">
               <div className="freeofeers">
                 <FaHandHoldingWater className="text-white" size={30} />
               </div>
@@ -260,7 +271,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-10 mt-lg-0 mt-4">
               <div className="freeofeers">
                 <FaWifi className="text-white" size={30} />
               </div>
@@ -272,7 +283,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-10 mt-lg-0 mt-4">
               <div className="freeofeers">
                 <FaGamepad className="text-white" size={30} />
               </div>
@@ -289,12 +300,14 @@ function App() {
       {/* gaming */}
       <Container id="gaming" className=" mt-5 pt-5">
         <section id="home ">
-          <div className="row">
-            <div className="col-7">
+          <div className="row d-flex justify-content-center">
+            <div className="col-lg-7 col-10">
               <div className=" d-flex flex-column  mt-3">
-                <h1 className="m-0 abt-us border-1">Game's & Entertainment</h1>
+                <h1 className="m-0 abt-us border-1 text-lg-start text-center">
+                  Game's & Entertainment
+                </h1>
 
-                <p className="pt-3">
+                <p className="pt-3 ">
                   At Women’s Cafe, we understand that a delightful coffee and
                   snack menu is only part of the experience. We believe in
                   providing an environment where connections flourish and where
@@ -304,7 +317,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="col-5">
+            <div className="col-lg-5 col-12 p-0">
               <div>
                 <img src={gaming} className="img-fluid rounded-1" alt="" />
               </div>
@@ -315,16 +328,19 @@ function App() {
 
       {/*unique*/}
       <Container id="unique" className="mt-5 pt-5">
-        <section className="mt-5">
-          <h1 className="mt-lg-5 text-center mb-3  abt-us border-1">
-            Our Unique Features
-          </h1>
-          <p className="text-center">
-            Our menu is full of baverages cold,hot coffee , shakes , bakery{" "}
-            <br></br> items and much more... check the menu below
-          </p>
-          <div className="row mt-4 uniqFeature">
-            <div className="col-4 text-center">
+        <section className="">
+          <div className="row d-flex justify-content-center mt-lg-0 mt-5">
+            <div className="col-lg-5 col-11">
+              <h1 className=" text-center mb-3  abt-us border-1">
+                Our Unique Features
+              </h1>
+              <p className="text-center">
+                Our Some Unique Features for women's focused cafe are little enjoying and nore wanted for wome's in cafe like we provide some exclusive befits like
+              </p>
+            </div>
+          </div>
+          <div className="row mt-4 uniqFeature d-flex justify-content-center">
+            <div className="col-lg-4 col-10 text-center">
               <div className="text-center d-flex justify-content-center mb-3">
                 <img src={lady} width={50} className=" img-fluid" alt="" />
               </div>
@@ -336,7 +352,7 @@ function App() {
               </p>
             </div>
 
-            <div className="col-4  text-center">
+            <div className="col-lg-4 col-10 text-center">
               <div className="text-center d-flex justify-content-center mb-3">
                 <img
                   src={complimentry}
@@ -354,7 +370,7 @@ function App() {
                 complimentary services such as
               </p>
             </div>
-            <div className="col-4 text-center">
+            <div className="col-lg-4 col-10 text-center">
               <div className="text-center d-flex justify-content-center mb-3">
                 <img src={womenFocusede} className=" img-fluid" alt="" />
               </div>
@@ -380,8 +396,8 @@ function App() {
             Our menu is full of baverages cold,hot coffee , shakes , bakery
             <br></br> items and much more... check the menu below
           </p>
-          <div className="row mt-4 uniqFeature">
-            <div className="col-4 text-center ">
+          <div className="row mt-4  d-flex justify-content-center">
+            <div className="col-lg-4 col-8 text-center ">
               <div className="bg-purple pt-2 pb-2">
                 <div className="text-center d-flex justify-content-center mb-3">
                   <img src={dinein} className=" img-fluid" alt="" />
@@ -395,7 +411,7 @@ function App() {
               </div>
             </div>
 
-            <div className="col-4  text-center ">
+            <div className="col-lg-4 col-8 text-center mt-lg-0 mt-4">
               <div className=" bg-purple pt-2 pb-2">
                 <div className="text-center d-flex justify-content-center mb-3">
                   <img src={delivery} className=" img-fluid" alt="" />
@@ -404,12 +420,12 @@ function App() {
                 <h5 className="abt-us">Delivery</h5>
               </div>
             </div>
-            <div className="col-4 text-center ">
+            <div className="col-lg-4 col-8 text-center mt-lg-0 mt-4">
               <div className="bg-purple pt-2 pb-2">
                 <div className="text-center d-flex justify-content-center mb-3">
                   <img src={takeaway} className=" img-fluid" alt="" />
                 </div>
-                <h5 className="abt-us">  Take Away</h5>
+                <h5 className="abt-us"> Take Away</h5>
               </div>
             </div>
           </div>
@@ -424,7 +440,7 @@ function App() {
             Contact Us
           </h1>
           <div className="row d-flex flex-column justify-content-center align-items-center">
-            <div className="col-8 d-flex flex-column justify-content-center shadow">
+            <div className="col-lg-8 col-10 d-flex flex-column justify-content-center shadow">
               <form
                 className="p-3"
                 action="action=https://formsubmit.co/el/confirm/320b4baaefff2d4d5358e55cea102759"
@@ -499,7 +515,7 @@ function App() {
       <footer>
         <div className="container-fluid mt-5  bgPurp pt-5 pb-5 ">
           <div className="row">
-            <div className="col-4">
+            <div className="col-lg-4  col-12">
               <img src={logoWhite} alt="" className="" width={220} />
               <p className="text-white mt-3 mb-0">
                 Welcome to Women's Cafe, a haven created exclusively for women.
@@ -514,7 +530,7 @@ function App() {
                 &nbsp;
               </div>
             </div>
-            <div className="col-lg-4 col-md-6  col-12  d-flex flex-column justify-content-center align-items-center">
+            <div className="col-lg-4   col-12 mt-lg-0 mt-3 d-lg-flex flex-column justify-content-center align-items-center">
               <div className=" ">
                 <h4 className="border-1  text-white">Links</h4>
                 <ul className=" list-unstyled footerUl m-0 ">
@@ -546,40 +562,38 @@ function App() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-12 ">
-              <div className="">
-                <div className="d-flex justify-content-between   ">
-                  <div className="freeofeers1">
-                    <a href="https://www.instagram.com/womenscaferyk/">
-                      <FaInstagramSquare size={20} />
-                    </a>
-                  </div>
-                  <div className="freeofeers1">
-                    <a href="https://www.facebook.com/your-facebook-profile">
-                      <FaFacebook size={20} />
-                    </a>
-                  </div>
-                  <div className="freeofeers1">
-                    <a href="https://www.linkedin.com/company/womens-cafe-ryk/">
-                      <FaLinkedin className="" size={20} />
-                    </a>
-                  </div>
-                  <div className="freeofeers1">
-                    <a href="https://www.tiktok.com/@womenscaferyk?is_from_webapp=1&sender_device=pc">
-                      <FaTiktok className="" size={20} />
-                    </a>
-                  </div>
-                  <div className="freeofeers1">
-                    <a href="https://www.tiktok.com/@womenscaferyk?is_from_webapp=1&sender_device=pc">
-                      <FaYoutubeSquare className="" size={20} />
-                    </a>
-                  </div>
+            <div className="col-lg-4  col-12 mt-lg-0 mt-3 mb-lg-0 mb-3">
+              <div className="d-flex justify-content-lg-between">
+                <div className="freeofeers1">
+                  <a href="https://www.instagram.com/womenscaferyk/">
+                    <FaInstagramSquare size={20} />
+                  </a>
+                </div>
+                <div className="freeofeers1">
+                  <a href="https://www.facebook.com/your-facebook-profile">
+                    <FaFacebook size={20} />
+                  </a>
+                </div>
+                <div className="freeofeers1">
+                  <a href="https://www.linkedin.com/company/womens-cafe-ryk/">
+                    <FaLinkedin className="" size={20} />
+                  </a>
+                </div>
+                <div className="freeofeers1">
+                  <a href="https://www.tiktok.com/@womenscaferyk?is_from_webapp=1&sender_device=pc">
+                    <FaTiktok className="" size={20} />
+                  </a>
+                </div>
+                <div className="freeofeers1">
+                  <a href="https://www.tiktok.com/@womenscaferyk?is_from_webapp=1&sender_device=pc">
+                    <FaYoutubeSquare className="" size={20} />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <p className="text-center mt-4  border-top ">
+        <p className="text-center mt-4  fontclass ">
           @Copyrights are reserved by <b>Women's Cafe</b>{" "}
         </p>
       </footer>
