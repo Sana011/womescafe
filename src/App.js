@@ -37,7 +37,44 @@ import logoWhite from "../src/components/assets/images/whiteLogo.png";
 import womenFocusede from "../src/components/assets/images/womenFocused.png";
 import lady from "../src/components/assets/images/lady.svg";
 import delivery from "../src/components/assets/images/deliveryBoy.png";
+import { useState } from "react";
 function App() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Form submitted successfully");
+      } else {
+        alert("Form submission failed");
+      }
+    } catch (error) {
+      alert("Form submission failed");
+    }
+  };
+
   return (
     <>
       <Container fluid className="p-0 m-0">
@@ -335,7 +372,9 @@ function App() {
                 Our Unique Features
               </h1>
               <p className="text-center">
-                Our Some Unique Features for women's focused cafe are little enjoying and nore wanted for wome's in cafe like we provide some exclusive befits like
+                Our Some Unique Features for women's focused cafe are little
+                enjoying and nore wanted for wome's in cafe like we provide some
+                exclusive befits like
               </p>
             </div>
           </div>
@@ -433,76 +472,79 @@ function App() {
       </Container>
 
       {/* contact us  */}
-
       <Container id="contact">
         <section>
-          <h1 className="mt-5 text-center mb-3 pt-5  abt-us border-1">
+          <h1 className="mt-5 text-center mb-3 pt-5 abt-us border-1">
             Contact Us
           </h1>
           <div className="row d-flex flex-column justify-content-center align-items-center">
             <div className="col-lg-8 col-10 d-flex flex-column justify-content-center shadow">
-              <form
-                className="p-3"
-                action="action=https://formsubmit.co/el/confirm/320b4baaefff2d4d5358e55cea102759"
-                method="POST"
-              >
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">
+              <form className="p-3" onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label">
                     Name
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="name"
                     autoComplete="off"
                     required
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">
                     Email address
                   </label>
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     id="email"
                     aria-describedby="emailHelp"
                     autoComplete="off"
                     required
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputNumber" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="number" className="form-label">
                     Phone Number
                   </label>
                   <input
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     id="number"
                     autoComplete="off"
                     aria-describedby="emailHelp"
                     required
                     name="number"
+                    value={formData.number}
+                    onChange={handleChange}
                   />
                 </div>
-                <label for="exampleInputEmail1" class="form-label">
+                <label htmlFor="floatingTextarea" className="form-label">
                   Your Query
                 </label>
-                <div class="">
+                <div>
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     id="floatingTextarea"
                     autoComplete="off"
                     required
                     name="message"
                     minLength={10}
-                  ></textarea>
+                    value={formData.message}
+                    onChange={handleChange}
+                  />
                 </div>
                 <button
                   type="submit"
-                  class=" text-white border-0 p-2 rounded bgPurp w-100 mt-3"
+                  className="text-white border-0 p-2 rounded bgPurp w-100 mt-3"
                 >
                   Submit
                 </button>
