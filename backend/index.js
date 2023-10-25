@@ -21,7 +21,7 @@ app.post("/api/contact", async (req, res) => {
   // Email data
   const mailOptions = {
     from: "womencafetaria@outlook.com",
-    to: formData.email,
+    to: "womenscafe7@gmail.com",
     subject: "New Contact Form Submission",
     text: `
       Name: ${formData.name}

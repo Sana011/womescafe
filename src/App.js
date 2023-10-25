@@ -38,6 +38,9 @@ import womenFocusede from "../src/components/assets/images/womenFocused.png";
 import lady from "../src/components/assets/images/lady.svg";
 import delivery from "../src/components/assets/images/deliveryBoy.png";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Oval } from "react-loader-spinner";
 function App() {
   const [formData, setFormData] = useState({
     name: "",
@@ -45,6 +48,7 @@ function App() {
     number: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,6 +60,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -64,19 +69,55 @@ function App() {
         },
         body: JSON.stringify(formData),
       });
-
+      setLoading(false);
       if (response.ok) {
-        alert("Form submitted successfully");
+        toast.success("Form submitted successfully");
       } else {
-        alert("Form submission failed");
+        toast.error("An error occurred while sending the email");
       }
     } catch (error) {
-      alert("Form submission failed");
+      toast.error("An error occurred while sending the email");
     }
   };
+  const style = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+  };
 
+  if (loading) {
+    return (
+      <div style={style}>
+        <Oval
+          height={80}
+          width={80}
+          color="#a27cb8"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          ariaLabel="oval-loading"
+          secondaryColor="#a27cb8"
+          strokeWidth={2}
+          strokeWidthSecondary={2}
+        />
+      </div>
+    );
+  }
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Container fluid className="p-0 m-0">
         <marquee
           behavior="scroll"
