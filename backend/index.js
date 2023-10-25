@@ -9,18 +9,18 @@ app.use(bodyParser.json());
 app.post("/api/contact", async (req, res) => {
   const formData = req.body;
   const transporter = nodemailer.createTransport({
-    host: "smtp-mail.outlook.com", // Outlook SMTP server
-    port: 587, // Standard port for TLS
-    secure: false, // true for 465, false for other ports
+    host: "smtp-mail.outlook.com", 
+    port: 587, 
+    secure: false, 
     auth: {
-      user: "womenscafe@gmail.com",
+      user: "womencafetaria@outlook.com",
       pass: "Quantum01101",
     },
   });
 
   // Email data
   const mailOptions = {
-    from: "womenscafe@gmail.com",
+    from: "womencafetaria@outlook.com",
     to: formData.email,
     subject: "New Contact Form Submission",
     text: `
